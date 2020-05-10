@@ -1,18 +1,18 @@
 <?php
 
 // add tab to actual product page
-add_filter( 'woocommerce_product_tabs', 'woo_add_size_table_tab' );
-function woo_add_size_table_tab ($tabs) {
-  if (get_post_meta(get_the_ID(), '_show_size_table', true) != 'yes') {
+add_filter( 'woocommerce_product_tabs', 'woo_add_product_badges_tab' );
+function woo_add_product_badges_tab ($tabs) {
+  if (get_post_meta(get_the_ID(), '_show_product_badges', true) != 'yes') {
     return $tabs;
   }
-  $priority = get_post_meta(get_the_ID(), '_size_table_custom_priority', true);
+  $priority = get_post_meta(get_the_ID(), '_product_badges_custom_priority', true);
   $priority = empty($priority) ? 25 : $priority;
 
-  $tabs['size_table_tab'] = array(
+  $tabs['product_badges_tab'] = array(
     'title' 	=> __( 'Size guide', 'woocommerce' ),
     'priority' 	=> $priority,
-    'callback' 	=> 'size_table_tab_content'
+    'callback' 	=> 'product_badges_tab_content'
   );
 
   add_action('get_footer', 'sizeTable_add_footer_styles');
@@ -20,8 +20,8 @@ function woo_add_size_table_tab ($tabs) {
   return $tabs;
 }
 
-function size_table_tab_content () {
-  $json = htmlspecialchars_decode(get_post_meta(get_the_ID(), '_size_table_data', true));
+function product_badges_tab_content () {
+  $json = htmlspecialchars_decode(get_post_meta(get_the_ID(), '_product_badges_data', true));
   $data = json_decode($json)->sizes;
 
   function build_table ($array) {
@@ -46,15 +46,15 @@ function size_table_tab_content () {
     return $html;
   }
 
-  echo '<div class="size-table">';
-  // echo '<div class="size-table-description">All measurements in cm</div>';
+  echo '<div class="product-badges">';
+  // echo '<div class="product-badges-description">All measurements in cm</div>';
   echo build_table($data);
   echo '</div>';
 }
 
 function sizeTable_add_footer_styles () {
   $path = plugins_url( 'style.css', __FILE__ );
-  wp_enqueue_style('size-table', $path);
+  wp_enqueue_style('product-badges', $path);
 };
 
 ?>

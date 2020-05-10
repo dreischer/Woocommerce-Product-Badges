@@ -1,12 +1,13 @@
 BIN = node_modules/.bin
+NAME = woocommerce-product-badges
 
 bootstrap:
 	yarn install
 
 build: clean lint
 	$(BIN)/webpack -p --progress
-	cp php/* dist/size-table
-	zip -r dist/size-table.zip dist/size-table
+	cp php/* dist/$(NAME)
+	zip -r dist/$(NAME).zip dist/$(NAME)
 
 watch:
 	$(BIN)/webpack -p --progress --watch

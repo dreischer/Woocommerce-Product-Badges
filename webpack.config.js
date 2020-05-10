@@ -6,12 +6,12 @@ module.exports = {
     'back-end': './js/back-end/index.js'
   },
   output: {
-    path: path.join(__dirname, 'dist/size-table/js'),
+    path: path.join(__dirname, 'dist/woocommerce-product-badges/js'),
     filename: '[name].js'
   },
   devtool: 'source-map',
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.jsx?$/,
         exclude: [/node_modules/],

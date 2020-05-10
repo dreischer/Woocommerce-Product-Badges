@@ -1,8 +1,8 @@
 <?php
 /**
-* Plugin Name: size table
+* Plugin Name: Woocommerce Product Badges
 * Plugin URI: https://www.sabinna.com/
-* Description: Add size tables to product pages
+* Description: Add badges to your PDPs
 * Version: 1.0
 * Author: David Reischer
 * Author URI: https://uk.linkedin.com/in/davidreischer/en
