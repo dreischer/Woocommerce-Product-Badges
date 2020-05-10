@@ -19,7 +19,7 @@ function write_product_badges_content () {
       $label = $item['label'];
 
       echo '<div class="product-badges-item">';
-      echo "<img src='$image' alt='$label' name='$label' />";
+      echo "<img src='$image' alt='$label' title='$label' />";
       echo "<span> $label </span>";
       echo '</div>';
     }
