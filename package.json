@@ -1,21 +1,21 @@
 {
-  "name": "size-table",
+  "name": "Woocommerce-Product-Badges",
   "version": "1.0.0",
-  "description": "Wordpress size table plugin",
+  "description": "Wordpress Product Badges plugin",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dreischer/size-table.git"
+    "url": "git+https://github.com/dreischer/Woocommerce-Product-Badges.git"
   },
   "author": "David Reischer",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dreischer/size-table/issues"
+    "url": "https://github.com/dreischer/Woocommerce-Product-Badges/issues"
   },
-  "homepage": "https://github.com/dreischer/size-table#readme",
+  "homepage": "https://github.com/dreischer/Woocommerce-Product-Badges#readme",
   "dependencies": {
     "buble": "^0.19.8",
     "buble-loader": "^0.5.1",
