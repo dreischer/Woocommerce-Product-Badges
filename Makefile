@@ -5,7 +5,9 @@ bootstrap:
 	yarn install
 
 build: clean lint
-	$(BIN)/webpack -p --progress
+	mkdir dist
+	mkdir dist/$(NAME)
+	# 	$(BIN)/webpack -p --progress
 	cp php/* dist/$(NAME)
 	zip -r dist/$(NAME).zip dist/$(NAME)
 
