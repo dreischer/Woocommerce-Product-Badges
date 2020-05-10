@@ -6,12 +6,15 @@ Two options:
 1. Upload `/dist/woocommerce-product-badges` to you plugin folder via FTP
 2. Upload `/dist/woocommerce-product-badges.zip` via the WP UI
 
-## Usage
-Each product has a new "Product Badges" tab.  
+## Config
+Badges are defined in `/php/badges.php`
 
-<!-- To show a size table for this product tick the checkbox. Click in any of the fields to update the values:
-![image](https://user-images.githubusercontent.com/5756475/28501636-f371e110-6fd7-11e7-9802-0762fc993048.png)
--->
+## Usage
+Each product has a new "Product Badges" tab.  There you can select specific badges you want to show for this product:
+![image](https://user-images.githubusercontent.com/5756475/81511180-4898fe00-930f-11ea-925c-51d0d7793af8.png)
+
+You'll then see the badges show under the add to cart button:
+![image](https://user-images.githubusercontent.com/5756475/81511222-aaf1fe80-930f-11ea-82e9-ec1c67042f7c.png)
 
 ## Build
 ```sh
