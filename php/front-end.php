@@ -1,6 +1,6 @@
 <?php
 
-add_action( 'woocommerce_after_add_to_cart_form', 'add_product_badges' );
+add_action( 'woocommerce_share', 'add_product_badges' );
 
 function add_product_badges () {
   if (get_post_meta(get_the_ID(), '_show_product_badges', true) == 'yes') {
@@ -31,7 +31,7 @@ function write_product_bages_css () {
   ?>
   <style>
   .product-badges-container {
-    margin: 30px 0 -10px;
+    margin: 0px;
     text-align: center;
   }
   .product-badges-container:first-of-type {
